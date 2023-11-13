@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
     for(int i=0;i<4;i++)
     {
         pthread_join(th[i],NULL);
-        printf("the thread %d has been joined",i);
+        printf("the thread %d has been joined\n",i);
     }
     pthread_mutex_destroy(&mutex);
     printf("The number of mails is %d",mails);
