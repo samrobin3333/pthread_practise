@@ -8,7 +8,7 @@ int primes[10] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
 void* routine(void* arg) {
     //sleep(1);
     // If thread1 is created with i=0, and it has not started yet. B4 it can start, i gets incremented. This creates a new thread.
-    // This results in both threads having the same i value.
+    // This results in both threads having the same i value, resulting in error
     int index = *(int*)arg;
     printf("%d ", primes[index]);
     free(arg);
